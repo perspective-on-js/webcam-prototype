@@ -8,7 +8,9 @@
 
     var workbench = document.getElementById('workbench');
     if (navigator && navigator.getUserMedia) {
-        workbench.innerHTML = 'We are good to go';
+        var video = document.createElement('video');
+        video.setAttribute('width', 640);
+        workbench.appendChild(video);
     } else {
         workbench.innerHTML = 'Something is amiss';
     }
